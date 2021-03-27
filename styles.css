@@ -1,0 +1,78 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background: #2f2d2e;
+}
+
+.box-outer {
+    overflow: hidden;
+    margin: 300px auto;
+    width: 200px;
+    height: 200px;
+}
+
+.main_box{
+    width: 200px;
+    height: 200px;
+    position: relative;
+    background: #2E4057;
+    border: 5px solid #2f2d2f;
+}
+
+.bar {
+    position: absolute;
+    width: 50px;
+    height: 3px;
+    background: #fff;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+}
+
+
+.bar.delay {
+    animation-delay: 0.9s;
+    -webkit-animation-delay: 0.5s;
+}
+
+.top {
+    top: -5px;
+    left: -5px;
+}
+
+.right{
+    top: 18px;
+    right: -28px;
+    transform: rotate(90deg);
+}
+
+.bottom {
+    bottom: -5px;
+    left: -5px;
+}
+
+.left {
+    top: 18px;
+    left: -28px;
+    transform: rotate(90deg);
+}
+
+@keyframes h-move {
+    100% {left: 230px;}
+}
+
+.top, .bottom {
+    animation-name: h-move ;
+}
+
+@keyframes v-move {
+    100% {top: 230px;}
+}
+
+.right, .left {
+    animation-name: v-move;
+}
